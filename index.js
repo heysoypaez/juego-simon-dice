@@ -3,7 +3,7 @@ Autor: Daniel Páez
 URL Autor: https://heysoypaez.com
 Tema de la clase: Juego html
 Descripción: juego html de un Simon Dice que recopila los fundamentos de js
-URL código: github.com/heysoypaez
+URL código: github.com/heysoypaez/juego-simon-dice
 */
 
 /*PROTOCOLO DE VERIFICACIÓN DE FUNCIONAMIENTO
@@ -57,7 +57,7 @@ console.log("inicializando archivo");
 						apellido: "Páez",
 						nivel: "Junior"
 					}
-						/*LISTA DE BIND s 
+						/*LISTA DE BINDs 
 						===================*/
 						this.siguienteNivel = this.siguienteNivel.bind(this);
 						this.elegirColor = this.elegirColor.bind(this)
@@ -201,27 +201,9 @@ console.log("inicializando archivo");
 					elegirColor(ev) {
 
 						const nombreColor = ev.target.dataset.color
-
 						const numeroColor = this.transformarColorANumero(nombreColor)
 
-						this.iluminarColor(nombreColor);
-
-						/*
-						¿Que resultado quiero?
-						Quiero que se verifique cuando el uusuario haga click en un boton,
-
-						 y si es igual felicitarme 
-
-						 y pasar al siguiente nivel si toque todos los de la secuencia de este nivel
-
-						 //
-
-						sino seguir el nivel hasta tocar el siguiente
-
-						//
-						sino toco bien que me diga que perdi y acabe el juego
-						*/
-
+						this.iluminarColor(nombreColor)
 
 						let turno = this.subnivel + 1
 
